@@ -66,4 +66,23 @@ final class FlightsLoader {
             completion(iatas())
         }
     }
+    
+    func calculateRoute(
+        from: String?,
+        to: String?
+    ) -> [Aircraft]? {
+        guard let from, let to, to != from, let flights else {
+            return nil
+        }
+        
+        // Check direct flights
+        if let direct = flights.aircraft.first(
+            where: { $0.fromIATA == from && $0.toIATA == to }
+        ) {
+            return [direct]
+        }
+        
+        // No flight match could be found
+        return nil
+    }
 }

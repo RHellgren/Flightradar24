@@ -127,4 +127,99 @@ final class FlightsLoaderTests: XCTestCase {
         XCTAssertEqual(loadedToIATAs[4], "AER")
         XCTAssertEqual(loadedToIATAs[5], "AGP")
     }
+    
+    func testRoute_SuccessDirect() throws {
+        let from = "DXB"
+        let to = "FLL"
+        let expectation = expectation(description: "IATA fetch")
+        var loadedFromIATAs: [String] = []
+        var loadedToIATAs: [String] = []
+        sut.loadIATAs { iatas in
+            loadedFromIATAs = iatas.from
+            loadedToIATAs = iatas.to
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 2)
+        
+        XCTAssertEqual(mockService.fetchCallsCount, 1)
+        
+        XCTAssertEqual(loadedFromIATAs.count, 292)
+        XCTAssertEqual(loadedToIATAs.count, 287)
+        
+        let route = try XCTUnwrap(sut.calculateRoute(from: from, to: to))
+        XCTAssertEqual(route.count, 1)
+        XCTAssertEqual(route[0].fromIATA, from)
+        XCTAssertEqual(route[0].toIATA, to)
+    }
+    
+    func testRoute_FailureNoFlightData() throws {
+        let from = "DXB"
+        let to = "FLL"
+        
+        XCTAssertEqual(mockService.fetchCallsCount, 0)
+        XCTAssertNil(sut.calculateRoute(from: from, to: to))
+    }
+    
+    func testRoute_FailureNoFrom() throws {
+        let from: String? = nil
+        let to = "FLL"
+        let expectation = expectation(description: "IATA fetch")
+        var loadedFromIATAs: [String] = []
+        var loadedToIATAs: [String] = []
+        sut.loadIATAs { iatas in
+            loadedFromIATAs = iatas.from
+            loadedToIATAs = iatas.to
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 2)
+        
+        XCTAssertEqual(mockService.fetchCallsCount, 1)
+        
+        XCTAssertEqual(loadedFromIATAs.count, 292)
+        XCTAssertEqual(loadedToIATAs.count, 287)
+        
+        XCTAssertNil(sut.calculateRoute(from: from, to: to))
+    }
+    
+    func testRoute_FailureNoTo() throws {
+        let from = "DXB"
+        let to: String? = nil
+        let expectation = expectation(description: "IATA fetch")
+        var loadedFromIATAs: [String] = []
+        var loadedToIATAs: [String] = []
+        sut.loadIATAs { iatas in
+            loadedFromIATAs = iatas.from
+            loadedToIATAs = iatas.to
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 2)
+        
+        XCTAssertEqual(mockService.fetchCallsCount, 1)
+        
+        XCTAssertEqual(loadedFromIATAs.count, 292)
+        XCTAssertEqual(loadedToIATAs.count, 287)
+        
+        XCTAssertNil(sut.calculateRoute(from: from, to: to))
+    }
+    
+    func testRoute_FailureToAndFromSame() throws {
+        let from = "FLL"
+        let to = "FLL"
+        let expectation = expectation(description: "IATA fetch")
+        var loadedFromIATAs: [String] = []
+        var loadedToIATAs: [String] = []
+        sut.loadIATAs { iatas in
+            loadedFromIATAs = iatas.from
+            loadedToIATAs = iatas.to
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 2)
+        
+        XCTAssertEqual(mockService.fetchCallsCount, 1)
+        
+        XCTAssertEqual(loadedFromIATAs.count, 292)
+        XCTAssertEqual(loadedToIATAs.count, 287)
+        
+        XCTAssertNil(sut.calculateRoute(from: from, to: to))
+    }
 }

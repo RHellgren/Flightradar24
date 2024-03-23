@@ -54,6 +54,11 @@ final class RouteViewController: UIViewController {
         button.changesSelectionAsPrimaryAction = true
         return button
     }()
+    private lazy var routeLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +80,7 @@ final class RouteViewController: UIViewController {
         view.addSubview(originButton)
         view.addSubview(destinationLabel)
         view.addSubview(destinationButton)
+        view.addSubview(routeLabel)
     }
     
     private func makeConstraints() {
@@ -123,7 +129,19 @@ final class RouteViewController: UIViewController {
             destinationButton.topAnchor.constraint(
                 equalTo: destinationLabel.topAnchor),
             destinationButton.widthAnchor.constraint(
-                equalToConstant: Constants.buttonWidth)
+                equalToConstant: Constants.buttonWidth),
+            
+            routeLabel.topAnchor.constraint(
+                equalTo: destinationButton.bottomAnchor,
+                constant: Constants.spacing),
+            routeLabel.leadingAnchor.constraint(
+                equalTo: view.leadingAnchor,
+                constant: Constants.insets.left),
+            routeLabel.trailingAnchor.constraint(
+                equalTo: view.trailingAnchor,
+                constant: Constants.insets.right),
+            routeLabel.bottomAnchor.constraint(
+                lessThanOrEqualTo: view.bottomAnchor)
         ])
     }
     
@@ -154,7 +172,7 @@ final class RouteViewController: UIViewController {
                 var originMenu: [UIMenuElement] = [UIAction(title: "---", handler: {_ in })]
                 iatas.from.forEach { from in
                     originMenu.append(
-                        UIAction(title: from, handler: self.didSelectOrigin)
+                        UIAction(title: from, handler: self.didSelectIATA)
                     )
                 }
                 self.originButton.menu = UIMenu(options: .displayInline, children: originMenu)
@@ -162,7 +180,7 @@ final class RouteViewController: UIViewController {
                 var destinationMenu: [UIMenuElement] = [UIAction(title: "---", handler: {_ in })]
                 iatas.to.forEach { to in
                     destinationMenu.append(
-                        UIAction(title: to, handler: self.didSelectDestination)
+                        UIAction(title: to, handler: self.didSelectIATA)
                     )
                 }
                 self.destinationButton.menu = UIMenu(options: .displayInline, children: destinationMenu)
@@ -171,17 +189,18 @@ final class RouteViewController: UIViewController {
     }
     
     @objc
-    private func didSelectOrigin(
+    private func didSelectIATA(
         _ action: UIAction
     ) {
-        // TODO: Find route
-    }
-    
-    @objc
-    private func didSelectDestination(
-        _ action: UIAction
-    ) {
-        // TODO: Find route
+        guard let route = flightsLoader.calculateRoute(
+            from: originButton.currentTitle,
+            to: destinationButton.currentTitle) else {
+            return
+        }
+        let routeString = route.map({ flight in
+            "\(flight.fromIATA) -> \(flight.toIATA)"
+        }).joined(separator: ", ")
+        routeLabel.text = String(localized: "Route found: \(routeString)")
     }
 }
 
