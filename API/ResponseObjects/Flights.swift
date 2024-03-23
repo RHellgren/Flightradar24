@@ -23,6 +23,9 @@ public struct Flights: Codable {
 
 public struct Aircraft: Codable {
     public let flightId: String
+    public let fromIATA: String
+    public let toIATA: String
+    
     let aircraftId: String
     let latitude: Double
     let longitude: Double
@@ -34,8 +37,6 @@ public struct Aircraft: Codable {
     let aircraftModel: String
     let aircraftRegistration: String
     let timestamp: Int
-    let fromIata: String
-    let toIata: String
     let flightNumber: String
     let onGround: Int
     let verticalSpeed: Int
@@ -43,6 +44,8 @@ public struct Aircraft: Codable {
     
     enum CodingKeys: String, CodingKey {
         case flightId = "flight_id"
+        case fromIATA = "from_iata"
+        case toIATA = "to_iata"
         case aircraftId = "aircraft_id"
         case latitude
         case longitude
@@ -54,8 +57,6 @@ public struct Aircraft: Codable {
         case aircraftModel = "aircraft_model"
         case aircraftRegistration = "aircraft_registration"
         case timestamp
-        case fromIata = "from_iata"
-        case toIata = "to_iata"
         case flightNumber = "flight_number"
         case onGround = "on_ground"
         case verticalSpeed = "vertical_speed"

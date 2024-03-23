@@ -82,11 +82,17 @@ final class FlightsViewController: UIViewController {
 
 extension FlightsViewController: UITableViewDataSource {
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
         state.flights.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell")!
         cell.textLabel?.text = String(localized: "Flight: \(state.flights[indexPath.row])")
         return cell
@@ -99,7 +105,7 @@ private final class FlightsView: UIStackView {
         super.init(frame: .zero)
         backgroundColor = .white
         axis = .vertical
-        loadButton.setTitle("Load flights", for: .normal)
+        loadButton.setTitle(String(localized: "Load flights"), for: .normal)
         progressIndicator.startAnimating()
         progressIndicator.style = .medium
         [loadButton, progressIndicator, tableView].forEach { view in

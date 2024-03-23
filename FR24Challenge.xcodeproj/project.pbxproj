@@ -23,6 +23,8 @@
 		0ADF20272BAEF84300A88C49 /* FlightsLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF20262BAEF84300A88C49 /* FlightsLoaderTests.swift */; };
 		0ADF20292BAEF8AD00A88C49 /* FlightsLoaderServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF20282BAEF8AD00A88C49 /* FlightsLoaderServiceMock.swift */; };
 		0ADF202C2BAEFA2300A88C49 /* FlightsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF202B2BAEFA2300A88C49 /* FlightsMock.swift */; };
+		0ADF202F2BAF0A8300A88C49 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF202E2BAF0A8300A88C49 /* Collection+Extensions.swift */; };
+		0ADF20312BAF0EAD00A88C49 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF20302BAF0EAD00A88C49 /* Array+Extensions.swift */; };
 		659F9068273A9D3700B06955 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F9067273A9D3700B06955 /* AppDelegate.swift */; };
 		659F9071273A9D3900B06955 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659F9070273A9D3900B06955 /* Assets.xcassets */; };
 		659F9074273A9D3900B06955 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659F9072273A9D3900B06955 /* LaunchScreen.storyboard */; };
@@ -78,6 +80,8 @@
 		0ADF20262BAEF84300A88C49 /* FlightsLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsLoaderTests.swift; sourceTree = "<group>"; };
 		0ADF20282BAEF8AD00A88C49 /* FlightsLoaderServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsLoaderServiceMock.swift; sourceTree = "<group>"; };
 		0ADF202B2BAEFA2300A88C49 /* FlightsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsMock.swift; sourceTree = "<group>"; };
+		0ADF202E2BAF0A8300A88C49 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		0ADF20302BAF0EAD00A88C49 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		659F9064273A9D3700B06955 /* FR24Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FR24Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		659F9067273A9D3700B06955 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		659F9070273A9D3900B06955 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,6 +178,15 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		0ADF202D2BAF0A7900A88C49 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0ADF202E2BAF0A8300A88C49 /* Collection+Extensions.swift */,
+				0ADF20302BAF0EAD00A88C49 /* Array+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		659F905B273A9D3700B06955 = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +215,7 @@
 				659F9081273AA73D00B06955 /* FlightsViewController.swift */,
 				659F9083273AAAC700B06955 /* RouteViewController.swift */,
 				0ADF20232BAEF7A400A88C49 /* Assets */,
+				0ADF202D2BAF0A7900A88C49 /* Extensions */,
 				659F9075273A9D3900B06955 /* Info.plist */,
 			);
 			path = FR24Challenge;
@@ -378,9 +392,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				659F9082273AA73D00B06955 /* FlightsViewController.swift in Sources */,
+				0ADF20312BAF0EAD00A88C49 /* Array+Extensions.swift in Sources */,
 				659F9080273AA5E600B06955 /* FlightsLoader.swift in Sources */,
 				659F9068273A9D3700B06955 /* AppDelegate.swift in Sources */,
 				659F9084273AAAC700B06955 /* RouteViewController.swift in Sources */,
+				0ADF202F2BAF0A8300A88C49 /* Collection+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

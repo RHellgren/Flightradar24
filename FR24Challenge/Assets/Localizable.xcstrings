@@ -1,7 +1,16 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Destination IATA" : {
+
+    },
     "Flight: %@" : {
+
+    },
+    "Load flights" : {
+
+    },
+    "Origin IATA" : {
 
     }
   },
