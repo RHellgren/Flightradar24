@@ -82,6 +82,16 @@ final class FlightsLoader {
             return [direct]
         }
         
+        // Check one stop
+        let relevantFirstFlights = flights.aircraft.filter({ $0.fromIATA == from })
+        for flight in relevantFirstFlights {
+            if let layover = flights.aircraft.first(
+                where: { $0.fromIATA == flight.toIATA && $0.toIATA == to }
+            ) {
+                return [flight, layover]
+            }
+        }
+        
         // No flight match could be found
         return nil
     }

@@ -152,6 +152,34 @@ final class FlightsLoaderTests: XCTestCase {
         XCTAssertEqual(route[0].toIATA, to)
     }
     
+    // TODO: Find good test data
+//    func testRoute_SuccessLayover() throws {
+//        let from = "???"
+//        let layover = "???"
+//        let to = "???"
+//        let expectation = expectation(description: "IATA fetch")
+//        var loadedFromIATAs: [String] = []
+//        var loadedToIATAs: [String] = []
+//        sut.loadIATAs { iatas in
+//            loadedFromIATAs = iatas.from
+//            loadedToIATAs = iatas.to
+//            expectation.fulfill()
+//        }
+//        wait(for: [expectation], timeout: 2)
+//        
+//        XCTAssertEqual(mockService.fetchCallsCount, 1)
+//        
+//        XCTAssertEqual(loadedFromIATAs.count, 292)
+//        XCTAssertEqual(loadedToIATAs.count, 287)
+//        
+//        let route = try XCTUnwrap(sut.calculateRoute(from: from, to: to))
+//        XCTAssertEqual(route.count, 2)
+//        XCTAssertEqual(route[0].fromIATA, from)
+//        XCTAssertEqual(route[0].toIATA, layover)
+//        XCTAssertEqual(route[1].fromIATA, layover)
+//        XCTAssertEqual(route[1].toIATA, to)
+//    }
+    
     func testRoute_FailureNoFlightData() throws {
         let from = "DXB"
         let to = "FLL"
