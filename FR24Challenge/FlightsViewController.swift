@@ -6,7 +6,29 @@
 import UIKit
 
 final class FlightsViewController: UIViewController {
+    
+    private let flightsLoader: FlightsLoader!
+    
+    // MARK: - Subviews
+    
+    private lazy var flightsView = FlightsView()
 
+    // MARK: - Initialiser
+    
+    init(
+        flightsLoader: FlightsLoader
+    ) {
+        self.flightsLoader = flightsLoader
+        self.state = .initial()
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Lifecycke
+    
     override func loadView() {
         view = flightsView
     }
@@ -18,17 +40,21 @@ final class FlightsViewController: UIViewController {
         flightsView.tableView.dataSource = self
         updateWithState(state)
     }
+    
+    // MARK: - Load flights
 
     @objc
     private func loadFlights() {
         state = .loading()
-        FlightsLoader().loadFlights { [weak self] flights in
+        flightsLoader.loadFlights { [weak self] flights in
             Task { @MainActor in
                 self?.state = .loaded(flights: flights)
             }
         }
     }
 
+    // MARK: - State
+    
     fileprivate struct State {
         let loadButtonHidden: Bool
         let progressIndicatorHidden: Bool
@@ -76,8 +102,6 @@ final class FlightsViewController: UIViewController {
         flightsView.tableView.isHidden = state.tableViewHidden
         flightsView.tableView.reloadData()
     }
-
-    private lazy var flightsView = FlightsView()
 }
 
 extension FlightsViewController: UITableViewDataSource {

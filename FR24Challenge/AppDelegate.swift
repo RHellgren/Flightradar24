@@ -17,15 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = .white
+        
+        let flightsLoader = FlightsLoader()
 
-        let flightsViewController = FlightsViewController()
+        let flightsViewController = FlightsViewController(
+            flightsLoader: flightsLoader
+        )
         flightsViewController.tabBarItem = UITabBarItem(
             title: "Flights",
             image: UIImage(systemName: "airplane.circle"),
             selectedImage: nil
         )
 
-        let routeViewController = RouteViewController()
+        let routeViewController = RouteViewController(
+            flightsLoader: flightsLoader
+        )
         routeViewController.tabBarItem = UITabBarItem(
             title: "Route",
             image: UIImage(systemName: "point.topleft.down.curvedto.point.bottomright.up"),

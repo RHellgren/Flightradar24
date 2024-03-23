@@ -7,8 +7,10 @@ import UIKit
 
 final class RouteViewController: UIViewController {
     
-    private var flightsLoader = FlightsLoader()
+    private let flightsLoader: FlightsLoader!
     
+    // MARK: - Subviews
+
     private lazy var loadButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -60,11 +62,28 @@ final class RouteViewController: UIViewController {
         return label
     }()
     
+    // MARK: - Initialiser
+
+    init(
+        flightsLoader: FlightsLoader
+    ) {
+        self.flightsLoader = flightsLoader
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Lifecycke
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         make()
     }
+    
+    // MARK: - Make
     
     private func make() {
         makeInstall()
@@ -160,6 +179,8 @@ final class RouteViewController: UIViewController {
             loadData), for: .touchUpInside)
     }
     
+    // MARK: - Load IATAs
+    
     @objc
     private func loadData() {
         progressIndicator.startAnimating()
@@ -188,6 +209,8 @@ final class RouteViewController: UIViewController {
         }
     }
     
+    // MARK: - Interaction
+    
     @objc
     private func didSelectIATA(
         _ action: UIAction
@@ -203,6 +226,8 @@ final class RouteViewController: UIViewController {
         routeLabel.text = String(localized: "Route found: \(routeString)")
     }
 }
+
+// MARK: - Constants
 
 extension RouteViewController {
     struct Constants {
