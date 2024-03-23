@@ -3,14 +3,26 @@
 //  FR24Challenge
 //
 
+import API
 import Foundation
 
 final class FlightsLoader {
+    
+    private let service: FlightsLoaderService!
+    
+    init(
+        service: FlightsLoaderService = FlightsLoaderServiceImpl()
+    ) {
+        self.service = service
+    }
 
-    func loadFlights(completion: @escaping ([String]) -> Void) {
-        // TODO: actually load flights
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-            completion(Array.init(repeating: "dummy", count: 10))
+    func loadFlights(
+        completion: @escaping ([String]) -> Void
+    ) {
+        Task {
+            let flights = try await service.fetch()
+            let flightIds = flights.aircraft.map { $0.flightId }
+            completion(flightIds)
         }
     }
 }

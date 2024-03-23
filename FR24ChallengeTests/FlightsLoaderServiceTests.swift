@@ -18,7 +18,7 @@ final class FlightsLoaderServiceTests: XCTestCase {
         let configuration = URLSessionConfiguration.default
         configuration.protocolClasses = [MockURLProtocol.self]
         let urlSession = URLSession.init(configuration: configuration)
-        sut = FlightsLoaderService(session: urlSession)
+        sut = FlightsLoaderServiceImpl(session: urlSession)
     }
 
     func testFetchSuccess() async throws {

@@ -23,7 +23,9 @@ final class FlightsViewController: UIViewController {
     private func loadFlights() {
         state = .loading()
         FlightsLoader().loadFlights { [weak self] flights in
-            self?.state = .loaded(flights: flights)
+            Task { @MainActor in
+                self?.state = .loaded(flights: flights)
+            }
         }
     }
 
@@ -65,7 +67,10 @@ final class FlightsViewController: UIViewController {
         }
     }
 
-    private func updateWithState(_ state: State) {
+    @MainActor
+    private func updateWithState(
+        _ state: State
+    ) {
         flightsView.loadButton.isHidden = state.loadButtonHidden
         flightsView.progressIndicator.isHidden = state.progressIndicatorHidden
         flightsView.tableView.isHidden = state.tableViewHidden
@@ -83,7 +88,7 @@ extension FlightsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell")!
-        cell.textLabel?.text = state.flights[indexPath.row]
+        cell.textLabel?.text = String(localized: "Flight: \(state.flights[indexPath.row])")
         return cell
     }
 }

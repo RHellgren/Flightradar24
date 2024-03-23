@@ -7,7 +7,12 @@
 
 import Foundation
 
-final class FlightsLoaderService {
+public protocol FlightsLoaderService {
+    init(session: URLSession)
+    func fetch() async throws -> Flights
+}
+
+public final class FlightsLoaderServiceImpl: FlightsLoaderService {
     
     private let session: URLSession
     private var decoder: JSONDecoder = {

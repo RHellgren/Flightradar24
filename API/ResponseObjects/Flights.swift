@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Flights: Codable {
+public struct Flights: Codable {
     let count: Int
     let version: Int
     let copyright: String
-    let aircraft: [Aircraft]
+    public let aircraft: [Aircraft]
     
     enum CodingKeys: String, CodingKey {
         case count = "full_count"
@@ -21,8 +21,8 @@ struct Flights: Codable {
     }
 }
 
-struct Aircraft: Codable {
-    let flightId: String
+public struct Aircraft: Codable {
+    public let flightId: String
     let aircraftId: String
     let latitude: Double
     let longitude: Double

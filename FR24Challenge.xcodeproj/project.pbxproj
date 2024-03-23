@@ -19,6 +19,10 @@
 		0ADF201F2BAEF23D00A88C49 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF201E2BAEF23D00A88C49 /* MockURLProtocol.swift */; };
 		0ADF20212BAEF25200A88C49 /* FlightsLoaderServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF20202BAEF25200A88C49 /* FlightsLoaderServiceTests.swift */; };
 		0ADF20222BAEF38100A88C49 /* Flights_mock.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF201A2BAEF21900A88C49 /* Flights_mock.json */; };
+		0ADF20252BAEF7B200A88C49 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF20242BAEF7B200A88C49 /* Localizable.xcstrings */; };
+		0ADF20272BAEF84300A88C49 /* FlightsLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF20262BAEF84300A88C49 /* FlightsLoaderTests.swift */; };
+		0ADF20292BAEF8AD00A88C49 /* FlightsLoaderServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF20282BAEF8AD00A88C49 /* FlightsLoaderServiceMock.swift */; };
+		0ADF202C2BAEFA2300A88C49 /* FlightsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF202B2BAEFA2300A88C49 /* FlightsMock.swift */; };
 		659F9068273A9D3700B06955 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F9067273A9D3700B06955 /* AppDelegate.swift */; };
 		659F9071273A9D3900B06955 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659F9070273A9D3900B06955 /* Assets.xcassets */; };
 		659F9074273A9D3900B06955 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659F9072273A9D3900B06955 /* LaunchScreen.storyboard */; };
@@ -70,6 +74,10 @@
 		0ADF201C2BAEF22600A88C49 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		0ADF201E2BAEF23D00A88C49 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		0ADF20202BAEF25200A88C49 /* FlightsLoaderServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsLoaderServiceTests.swift; sourceTree = "<group>"; };
+		0ADF20242BAEF7B200A88C49 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		0ADF20262BAEF84300A88C49 /* FlightsLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsLoaderTests.swift; sourceTree = "<group>"; };
+		0ADF20282BAEF8AD00A88C49 /* FlightsLoaderServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsLoaderServiceMock.swift; sourceTree = "<group>"; };
+		0ADF202B2BAEFA2300A88C49 /* FlightsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsMock.swift; sourceTree = "<group>"; };
 		659F9064273A9D3700B06955 /* FR24Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FR24Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		659F9067273A9D3700B06955 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		659F9070273A9D3900B06955 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +139,7 @@
 			children = (
 				0ADF20182BAEF1F500A88C49 /* Mock */,
 				0ADF20202BAEF25200A88C49 /* FlightsLoaderServiceTests.swift */,
+				0ADF20262BAEF84300A88C49 /* FlightsLoaderTests.swift */,
 			);
 			path = FR24ChallengeTests;
 			sourceTree = "<group>";
@@ -140,6 +149,7 @@
 			children = (
 				0ADF20192BAEF20000A88C49 /* MockData */,
 				0ADF201E2BAEF23D00A88C49 /* MockURLProtocol.swift */,
+				0ADF20282BAEF8AD00A88C49 /* FlightsLoaderServiceMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -149,8 +159,19 @@
 			children = (
 				0ADF201A2BAEF21900A88C49 /* Flights_mock.json */,
 				0ADF201C2BAEF22600A88C49 /* MockData.swift */,
+				0ADF202B2BAEFA2300A88C49 /* FlightsMock.swift */,
 			);
 			path = MockData;
+			sourceTree = "<group>";
+		};
+		0ADF20232BAEF7A400A88C49 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				659F9070273A9D3900B06955 /* Assets.xcassets */,
+				659F9072273A9D3900B06955 /* LaunchScreen.storyboard */,
+				0ADF20242BAEF7B200A88C49 /* Localizable.xcstrings */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		659F905B273A9D3700B06955 = {
@@ -180,8 +201,7 @@
 				659F907F273AA5E600B06955 /* FlightsLoader.swift */,
 				659F9081273AA73D00B06955 /* FlightsViewController.swift */,
 				659F9083273AAAC700B06955 /* RouteViewController.swift */,
-				659F9070273A9D3900B06955 /* Assets.xcassets */,
-				659F9072273A9D3900B06955 /* LaunchScreen.storyboard */,
+				0ADF20232BAEF7A400A88C49 /* Assets */,
 				659F9075273A9D3900B06955 /* Info.plist */,
 			);
 			path = FR24Challenge;
@@ -321,6 +341,7 @@
 			files = (
 				0ADF20222BAEF38100A88C49 /* Flights_mock.json in Resources */,
 				659F9074273A9D3900B06955 /* LaunchScreen.storyboard in Resources */,
+				0ADF20252BAEF7B200A88C49 /* Localizable.xcstrings in Resources */,
 				659F9071273A9D3900B06955 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,8 +365,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ADF201F2BAEF23D00A88C49 /* MockURLProtocol.swift in Sources */,
+				0ADF202C2BAEFA2300A88C49 /* FlightsMock.swift in Sources */,
 				0ADF20212BAEF25200A88C49 /* FlightsLoaderServiceTests.swift in Sources */,
+				0ADF20272BAEF84300A88C49 /* FlightsLoaderTests.swift in Sources */,
 				0ADF201D2BAEF22600A88C49 /* MockData.swift in Sources */,
+				0ADF20292BAEF8AD00A88C49 /* FlightsLoaderServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +430,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -419,11 +443,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = FR24Challenge.API;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -448,7 +475,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,9 +488,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = FR24Challenge.API;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -481,15 +511,18 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = FR24Challenge.FR24ChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FR24Challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FR24Challenge";
 			};
 			name = Debug;
@@ -506,14 +539,17 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = FR24Challenge.FR24ChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FR24Challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FR24Challenge";
 			};
 			name = Release;
@@ -647,9 +683,9 @@
 				INFOPLIST_FILE = FR24Challenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -657,9 +693,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flightradar24.FR24Challenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -676,9 +715,9 @@
 				INFOPLIST_FILE = FR24Challenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -686,9 +725,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flightradar24.FR24Challenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
