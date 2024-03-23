@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ADF1FF92BAEEF5700A88C49 /* API.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADF1FF82BAEEF5700A88C49 /* API.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0ADF1FFC2BAEEF5700A88C49 /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADF1FF62BAEEF5700A88C49 /* API.framework */; };
+		0ADF1FFD2BAEEF5700A88C49 /* API.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADF1FF62BAEEF5700A88C49 /* API.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0ADF20042BAEEF7600A88C49 /* FlightsLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF20032BAEEF7600A88C49 /* FlightsLoaderService.swift */; };
+		0ADF20062BAEEFB500A88C49 /* Flights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF20052BAEEFB500A88C49 /* Flights.swift */; };
+		0ADF20082BAEF15C00A88C49 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF20072BAEF15C00A88C49 /* HTTPStatusCode.swift */; };
+		0ADF200A2BAEF16B00A88C49 /* FlightsLoaderServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF20092BAEF16B00A88C49 /* FlightsLoaderServiceError.swift */; };
+		0ADF201B2BAEF21900A88C49 /* Flights_mock.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF201A2BAEF21900A88C49 /* Flights_mock.json */; };
+		0ADF201D2BAEF22600A88C49 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF201C2BAEF22600A88C49 /* MockData.swift */; };
+		0ADF201F2BAEF23D00A88C49 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF201E2BAEF23D00A88C49 /* MockURLProtocol.swift */; };
+		0ADF20212BAEF25200A88C49 /* FlightsLoaderServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF20202BAEF25200A88C49 /* FlightsLoaderServiceTests.swift */; };
+		0ADF20222BAEF38100A88C49 /* Flights_mock.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ADF201A2BAEF21900A88C49 /* Flights_mock.json */; };
 		659F9068273A9D3700B06955 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F9067273A9D3700B06955 /* AppDelegate.swift */; };
 		659F9071273A9D3900B06955 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659F9070273A9D3900B06955 /* Assets.xcassets */; };
 		659F9074273A9D3900B06955 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659F9072273A9D3900B06955 /* LaunchScreen.storyboard */; };
@@ -15,7 +27,49 @@
 		659F9084273AAAC700B06955 /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F9083273AAAC700B06955 /* RouteViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0ADF1FFA2BAEEF5700A88C49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 659F905C273A9D3700B06955 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ADF1FF52BAEEF5700A88C49;
+			remoteInfo = API;
+		};
+		0ADF20132BAEF1EB00A88C49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 659F905C273A9D3700B06955 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 659F9063273A9D3700B06955;
+			remoteInfo = FR24Challenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0ADF1FFE2BAEEF5700A88C49 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0ADF1FFD2BAEEF5700A88C49 /* API.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0ADF1FF62BAEEF5700A88C49 /* API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ADF1FF82BAEEF5700A88C49 /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
+		0ADF20032BAEEF7600A88C49 /* FlightsLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsLoaderService.swift; sourceTree = "<group>"; };
+		0ADF20052BAEEFB500A88C49 /* Flights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flights.swift; sourceTree = "<group>"; };
+		0ADF20072BAEF15C00A88C49 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
+		0ADF20092BAEF16B00A88C49 /* FlightsLoaderServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsLoaderServiceError.swift; sourceTree = "<group>"; };
+		0ADF200F2BAEF1EB00A88C49 /* FR24ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FR24ChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ADF201A2BAEF21900A88C49 /* Flights_mock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Flights_mock.json; sourceTree = "<group>"; };
+		0ADF201C2BAEF22600A88C49 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		0ADF201E2BAEF23D00A88C49 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		0ADF20202BAEF25200A88C49 /* FlightsLoaderServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsLoaderServiceTests.swift; sourceTree = "<group>"; };
 		659F9064273A9D3700B06955 /* FR24Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FR24Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		659F9067273A9D3700B06955 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		659F9070273A9D3900B06955 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -27,20 +81,84 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		659F9061273A9D3700B06955 /* Frameworks */ = {
+		0ADF1FF32BAEEF5700A88C49 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0ADF200C2BAEF1EB00A88C49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		659F9061273A9D3700B06955 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ADF1FFC2BAEEF5700A88C49 /* API.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ADF1FF72BAEEF5700A88C49 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0ADF20022BAEEF6000A88C49 /* ResponseObjects */,
+				0ADF1FF82BAEEF5700A88C49 /* API.h */,
+				0ADF20032BAEEF7600A88C49 /* FlightsLoaderService.swift */,
+				0ADF20072BAEF15C00A88C49 /* HTTPStatusCode.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		0ADF20022BAEEF6000A88C49 /* ResponseObjects */ = {
+			isa = PBXGroup;
+			children = (
+				0ADF20052BAEEFB500A88C49 /* Flights.swift */,
+				0ADF20092BAEF16B00A88C49 /* FlightsLoaderServiceError.swift */,
+			);
+			path = ResponseObjects;
+			sourceTree = "<group>";
+		};
+		0ADF20102BAEF1EB00A88C49 /* FR24ChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				0ADF20182BAEF1F500A88C49 /* Mock */,
+				0ADF20202BAEF25200A88C49 /* FlightsLoaderServiceTests.swift */,
+			);
+			path = FR24ChallengeTests;
+			sourceTree = "<group>";
+		};
+		0ADF20182BAEF1F500A88C49 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				0ADF20192BAEF20000A88C49 /* MockData */,
+				0ADF201E2BAEF23D00A88C49 /* MockURLProtocol.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		0ADF20192BAEF20000A88C49 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				0ADF201A2BAEF21900A88C49 /* Flights_mock.json */,
+				0ADF201C2BAEF22600A88C49 /* MockData.swift */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
 		659F905B273A9D3700B06955 = {
 			isa = PBXGroup;
 			children = (
 				659F9066273A9D3700B06955 /* FR24Challenge */,
+				0ADF1FF72BAEEF5700A88C49 /* API */,
+				0ADF20102BAEF1EB00A88C49 /* FR24ChallengeTests */,
 				659F9065273A9D3700B06955 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				659F9064273A9D3700B06955 /* FR24Challenge.app */,
+				0ADF1FF62BAEEF5700A88C49 /* API.framework */,
+				0ADF200F2BAEF1EB00A88C49 /* FR24ChallengeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,7 +189,54 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		0ADF1FF12BAEEF5700A88C49 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ADF1FF92BAEEF5700A88C49 /* API.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		0ADF1FF52BAEEF5700A88C49 /* API */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ADF20012BAEEF5700A88C49 /* Build configuration list for PBXNativeTarget "API" */;
+			buildPhases = (
+				0ADF1FF12BAEEF5700A88C49 /* Headers */,
+				0ADF1FF22BAEEF5700A88C49 /* Sources */,
+				0ADF1FF32BAEEF5700A88C49 /* Frameworks */,
+				0ADF1FF42BAEEF5700A88C49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = API;
+			productName = API;
+			productReference = 0ADF1FF62BAEEF5700A88C49 /* API.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0ADF200E2BAEF1EB00A88C49 /* FR24ChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ADF20152BAEF1EB00A88C49 /* Build configuration list for PBXNativeTarget "FR24ChallengeTests" */;
+			buildPhases = (
+				0ADF200B2BAEF1EB00A88C49 /* Sources */,
+				0ADF200C2BAEF1EB00A88C49 /* Frameworks */,
+				0ADF200D2BAEF1EB00A88C49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0ADF20142BAEF1EB00A88C49 /* PBXTargetDependency */,
+			);
+			name = FR24ChallengeTests;
+			productName = FR24ChallengeTests;
+			productReference = 0ADF200F2BAEF1EB00A88C49 /* FR24ChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		659F9063273A9D3700B06955 /* FR24Challenge */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 659F9078273A9D3900B06955 /* Build configuration list for PBXNativeTarget "FR24Challenge" */;
@@ -77,10 +244,12 @@
 				659F9060273A9D3700B06955 /* Sources */,
 				659F9061273A9D3700B06955 /* Frameworks */,
 				659F9062273A9D3700B06955 /* Resources */,
+				0ADF1FFE2BAEEF5700A88C49 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0ADF1FFB2BAEEF5700A88C49 /* PBXTargetDependency */,
 			);
 			name = FR24Challenge;
 			productName = FR24Challange;
@@ -94,9 +263,17 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1310;
+				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
+					0ADF1FF52BAEEF5700A88C49 = {
+						CreatedOnToolsVersion = 15.1;
+						LastSwiftMigration = 1510;
+					};
+					0ADF200E2BAEF1EB00A88C49 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 659F9063273A9D3700B06955;
+					};
 					659F9063273A9D3700B06955 = {
 						CreatedOnToolsVersion = 13.1;
 					};
@@ -116,15 +293,33 @@
 			projectRoot = "";
 			targets = (
 				659F9063273A9D3700B06955 /* FR24Challenge */,
+				0ADF1FF52BAEEF5700A88C49 /* API */,
+				0ADF200E2BAEF1EB00A88C49 /* FR24ChallengeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0ADF1FF42BAEEF5700A88C49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ADF200D2BAEF1EB00A88C49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ADF201B2BAEF21900A88C49 /* Flights_mock.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		659F9062273A9D3700B06955 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ADF20222BAEF38100A88C49 /* Flights_mock.json in Resources */,
 				659F9074273A9D3900B06955 /* LaunchScreen.storyboard in Resources */,
 				659F9071273A9D3900B06955 /* Assets.xcassets in Resources */,
 			);
@@ -133,6 +328,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0ADF1FF22BAEEF5700A88C49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ADF20082BAEF15C00A88C49 /* HTTPStatusCode.swift in Sources */,
+				0ADF200A2BAEF16B00A88C49 /* FlightsLoaderServiceError.swift in Sources */,
+				0ADF20042BAEEF7600A88C49 /* FlightsLoaderService.swift in Sources */,
+				0ADF20062BAEEFB500A88C49 /* Flights.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ADF200B2BAEF1EB00A88C49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ADF201F2BAEF23D00A88C49 /* MockURLProtocol.swift in Sources */,
+				0ADF20212BAEF25200A88C49 /* FlightsLoaderServiceTests.swift in Sources */,
+				0ADF201D2BAEF22600A88C49 /* MockData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		659F9060273A9D3700B06955 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,6 +362,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0ADF1FFB2BAEEF5700A88C49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ADF1FF52BAEEF5700A88C49 /* API */;
+			targetProxy = 0ADF1FFA2BAEEF5700A88C49 /* PBXContainerItemProxy */;
+		};
+		0ADF20142BAEF1EB00A88C49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 659F9063273A9D3700B06955 /* FR24Challenge */;
+			targetProxy = 0ADF20132BAEF1EB00A88C49 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		659F9072273A9D3900B06955 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -158,6 +387,137 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0ADF1FFF2BAEEF5700A88C49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RWFN77K3XA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = FR24Challenge.API;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0ADF20002BAEEF5700A88C49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RWFN77K3XA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = FR24Challenge.API;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0ADF20162BAEF1EB00A88C49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y2Y4TXK6US;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FR24Challenge.FR24ChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FR24Challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FR24Challenge";
+			};
+			name = Debug;
+		};
+		0ADF20172BAEF1EB00A88C49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y2Y4TXK6US;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FR24Challenge.FR24ChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FR24Challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FR24Challenge";
+			};
+			name = Release;
+		};
 		659F9076273A9D3900B06955 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -277,6 +637,7 @@
 		659F9079273A9D3900B06955 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -305,6 +666,7 @@
 		659F907A273A9D3900B06955 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -333,6 +695,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0ADF20012BAEEF5700A88C49 /* Build configuration list for PBXNativeTarget "API" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ADF1FFF2BAEEF5700A88C49 /* Debug */,
+				0ADF20002BAEEF5700A88C49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0ADF20152BAEF1EB00A88C49 /* Build configuration list for PBXNativeTarget "FR24ChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ADF20162BAEF1EB00A88C49 /* Debug */,
+				0ADF20172BAEF1EB00A88C49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		659F905F273A9D3700B06955 /* Build configuration list for PBXProject "FR24Challenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
